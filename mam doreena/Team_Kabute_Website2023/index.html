@@ -1,0 +1,169 @@
+<!Doctype html>
+<html>
+<head>
+	<meta name="viewport" content="with=device-width, initial-scale=1.0">
+	<title>TEAM KABUTE WEBSITE</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+<body>
+	<section class="header">
+		<nav>
+			<a href="index.html"><img src="images/logo.png"></a>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li>
+						<a href="#">Encryption Method ▼</a>
+						<ul class="dropdown">
+							<li><a href="caesar.html">CAESAR CIPHER</a></li>
+							<li><a href="vigenere.html">VIGENERE CIPHER</a></li>
+							<li><a href="vernam.html">VERNAM CIPHER</a></li>
+							<li><a href="playfair.html">PLAYFAIR CIPHER</a></li>
+							<li><a href="one-time-pad.html">ONE-TIME PAD</a></li>
+							<li><a href="AES.html">Advanced Encryption Standard (AES)</a></li>
+							<li><a href="DES.html">Data Encryption Standard (DES)</a></li>
+							<li><a href="Hashing.html">Hashing</a></li>
+						</ul>
+					</li>
+					<li><a href="about.html">ABOUT</a></li>
+				</ul>
+				<div class="text-box">
+				<h1> WELCOME TO CRYPTOGRAPHY </h1>
+				<p>  Study of secure communications techniques that allow only the sender and intended recipient of a message to view its contents.</p>
+			</div>
+
+</section>
+
+<!----caesar------>
+<section class="caesar">
+	<h1>~CIPHERS~</h1>
+	<p> "There are no secrets that time does not reveal" - Jean Racine</p>
+
+	<div class="row">
+         <div class="caesar-col">
+         	<h3>Caesar Cipher</h3>
+         	<img src="images/caesar.jpg">
+         	<p> It is one of the earliest and simplest cipher. It was made by Julius Caesar around 100 BC.      <br> <br> </p>
+         	<a href="caesar.html" class="hero-btn">Open</a>
+         </div>
+         <div class="caesar-col">
+         	<h3>Vigenere Cipher</h3>
+         	<img src="images/Vigenere.jpg">
+         	<p>A classical encryption method that was invented in the 16th century and was created by Giovan Battista Bellaso in 1553. <br> <br> </p>
+         	<a href="vigenere.html" class="hero-btn">Open</a>
+         </div>
+         <div class="caesar-col">
+         	<h3>Playfair Cipher</h3>
+         	<img src="images/play fair.jpg">
+         	<p>It was invented in 1854 by Charles Wheatstone, but named after lord Playfair who heavily promoted the use of the cipher. <br> <br> </p>
+         	<a href="playfair.html" class="hero-btn">Open</a>
+         </div>
+          <div class="caesar-col">
+         	<h3>Vernam Cipher</h3>
+         	<img src="images/vernam.jpg">
+         	<p>It is an encryption algorithm that uses a one-time-pad pre-shared of the same length as the plaintext. It was invented by Gilbert Vernam in 1917.</p>
+         	<a href="vernam.html" class="hero-btn">Open</a>
+         </div>
+    </div>
+
+    <div class="row">
+         <div class="caesar-col">
+         	<h3>One-Time Pad</h3>
+         	<img src="images/vernam.jpg">
+         	<p> It is one of the earliest and simplest cipher. It was made by Julius Caesar around 100 BC.      <br> <br> </p>
+         	<a href="caesar.html" class="hero-btn">Open</a>
+         </div>
+         <div class="caesar-col">
+         	<h3>Advanced Encryption Standard</h3>
+         	<img src="images/vincexjoan.jpg">
+         	<p>It is considered one of the most secure encryption algorithms available today and is widely used in industries such as finance, healthcare, and government for protecting sensitive data. <br> <br> </p>
+         	<a href="vigenere.html" class="hero-btn">Open</a>
+         </div>
+         <div class="caesar-col">
+         	<h3>Data Encryption Standard</h3>
+         	<img src="images/horst.jfif">
+         	<p>It is a symmetric-key algorithm for the encryption of digital data.  It uses a 56-bit key, which is considered relatively weak by modern standards. <br> <br> </p>
+         	<a href="playfair.html" class="hero-btn">Open</a>
+         </div>
+          <div class="caesar-col">
+         	<h3>HASHING</h3>
+         	<img src="images/luhn.jpeg">
+         	<p>It is the process of transforming any given key or a string of characters into another value. The most popular use for hashing is the implementation of hash tables.</p>
+         	<a href="vernam.html" class="hero-btn">Open</a>
+         </div>
+    </div>
+</section>
+
+
+
+<!------- Footer -------->
+<section class="footer">
+	<div class="icons">
+		<i class="fa fa-facebook"></i>
+		<i class="fa fa-twitter"></i>
+		<i class="fa fa-instagram"></i>
+		<i class="fa fa-github"></i>
+	</div>
+	<p>Made by <i class="fa fa-heart-o"></i> Team Kabute </p>
+</section>
+
+
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-----JavaScript for Toggle Menu------>	
+<script>
+
+	var navLinks = document.getElementById("navLinks");
+
+	function showMenu(){
+		navLinks.style.right = "0";
+	}
+	function hideMenu(){
+		navLinks.style.right = "-200px";
+	}
+	
+</script>
+
+</body>
+</html>

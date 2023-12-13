@@ -1,0 +1,137 @@
+<!Doctype html>
+<html>
+<head>
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title>TEAM KABUTE WEBSITE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+<body>
+<section class="sub-header">
+    <nav>
+      <a href="index.html"><img src="images/logo.png"></a>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li>
+          <a href="#">Encryption Method ▼</a>
+          <ul class="dropdown">
+            <li><a href="caesar.html">CAESAR CIPHER</a></li>
+            <li><a href="vigenere.html">VIGENERE CIPHER</a></li>
+            <li><a href="vernam.html">VERNAM CIPHER</a></li>
+            <li><a href="playfair.html">PLAYFAIR CIPHER</a></li>
+            <li><a href="one-time-pad.html">ONE-TIME PAD</a></li>
+            <li><a href="AES.html">Advanced Encryption Standard (AES)</a></li>
+            <li><a href="DES.html">Data Encryption Standard (DES)</a></li>
+            <li><a href="Hashing.html">Hashing</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">ABOUT</a></li>
+      </ul>
+    </nav>
+    <h1>Data Encryption Standard (DES)</h1>
+</section>
+
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .input-container {
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px;
+      border-radius: 5px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: skyblue;
+      color: black;
+      padding: 8px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: lightpink;
+    }
+
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+  </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+        function encryptDES() {
+            // Get the input plaintext and key from the HTML form
+            var plaintext = document.getElementById("plaintext").value;
+            var key = document.getElementById("key").value;
+
+            // Perform DES encryption using CryptoJS library
+            var encryptedData = CryptoJS.DES.encrypt(plaintext, key).toString();
+
+            // Display the encrypted data
+            document.getElementById("encryptedData").innerHTML = encryptedData;
+        }
+
+        function decryptDES() {
+            // Get the input encrypted data and key from the HTML form
+            var encryptedData = document.getElementById("encryptedData").innerHTML;
+            var key = document.getElementById("key").value;
+
+            // Perform DES decryption using CryptoJS library
+            var decryptedData = CryptoJS.DES.decrypt(encryptedData, key).toString(CryptoJS.enc.Utf8);
+
+            // Display the decrypted data
+            document.getElementById("decryptedData").innerHTML = decryptedData;
+        }
+    </script>
+</head>
+
+<body>
+  <div class="input-container">
+    <label for="plaintext">Plaintext:</label>
+    <input type="text" id="plaintext" placeholder="Enter plaintext">
+    <label for="key">Key:</label>
+    <input type="text" id="key" placeholder="Enter key">
+
+    <button onclick="encryptDES()">Encrypt</button>
+    <br>
+    <p>Encrypted Data: <textarea id="encryptedData" rows="4" cols="50" readonly></textarea>
+    <button onclick="decryptDES()">Decrypt</button>
+    <br>
+    <p>Decrypted Data: <textarea id="decryptedData" rows="4" cols="50" readonly></textarea>
+    </p>
+  </div>
+</body>
+
+</html>
+
+<!------ Footer ------>
+
+<section class="footer">
+  <div class="icons">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-github"></i>
+  </div>
+  <p>Made by <i class="fa fa-heart-o"></i> Team Kabute </p>
+</section>

@@ -1,0 +1,136 @@
+<!Doctype html>
+<html>
+<head>
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title>TEAM KABUTE WEBSITE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+<body>
+<section class="sub-header">
+    <nav>
+      <a href="index.html"><img src="images/logo.png"></a>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li>
+          <a href="#">Encryption Method ▼</a>
+          <ul class="dropdown">
+            <li><a href="caesar.html">CAESAR CIPHER</a></li>
+            <li><a href="vigenere.html">VIGENERE CIPHER</a></li>
+            <li><a href="vernam.html">VERNAM CIPHER</a></li>
+            <li><a href="playfair.html">PLAYFAIR CIPHER</a></li>
+            <li><a href="one-time-pad.html">ONE-TIME PAD</a></li>
+            <li><a href="AES.html">Advanced Encryption Standard (AES)</a></li>
+            <li><a href="DES.html">Data Encryption Standard (DES)</a></li>
+            <li><a href="Hashing.html">Hashing</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">ABOUT</a></li>
+      </ul>
+    </nav>
+    <h1>HASHING</h1>
+</section>
+
+<style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .formContainer {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px;
+      border-radius: 5px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: skyblue;
+      color: white;
+      padding: 8px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: lightpink;
+    }
+
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+  </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script>
+        function hashString() {
+            var input = document.getElementById("inputText").value;
+            var hashed = CryptoJS.SHA256(input).toString();
+            
+            document.getElementById("hashedText").textContent = hashed;
+        }
+
+        function encryptText() {
+            var input = document.getElementById("inputText").value;
+            var encrypted = CryptoJS.AES.encrypt(input, "secret key").toString();
+            
+            document.getElementById("encryptedText").textContent = encrypted;
+        }
+
+        function decryptText() {
+            var encrypted = document.getElementById("encryptedText").textContent;
+            var decrypted = CryptoJS.AES.decrypt(encrypted, "secret key").toString(CryptoJS.enc.Utf8);
+            
+            document.getElementById("decryptedText").textContent = decrypted;
+        }
+    </script>
+</head>
+<body>
+    <div class="formContainer">
+        <label for="inputText">Input Text:</label>
+        <input type="text" id="inputText">
+        <br>
+        
+        <button onclick="hashString()">Hash</button>
+        <button onclick="encryptText()">Encrypt</button>
+        <button onclick="decryptText()">Decrypt</button>
+        
+        <h2>Hashed Text:</h2>
+        <textarea id="hashedText" rows="5"></textarea>
+        
+        <h2>Encrypted Text:</h2>
+        <textarea id="encryptedText" rows="5"></textarea>
+        
+        <h2>Decrypted Text:</h2>
+        <textarea id="decryptedText" rows="5"></textarea>
+    </div>
+</body>
+</html>
+
+<!------ Footer ------>
+
+<section class="footer">
+  <div class="icons">
+    <i class="fa fa-facebook"></i>
+    <i class="fa fa-twitter"></i>
+    <i class="fa fa-instagram"></i>
+    <i class="fa fa-github"></i>
+  </div>
+  <p>Made by <i class="fa fa-heart-o"></i> Team Kabute </p>
+</section>
